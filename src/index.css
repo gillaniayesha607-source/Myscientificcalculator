@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  @apply bg-[#0A0B0D];
+}
+
+/* Markdown styling for AI responses */
+.prose pre {
+  @apply bg-black/40 border border-white/5 rounded-lg p-3 my-2 overflow-x-auto;
+}
+
+.prose code {
+  @apply text-emerald-400 font-mono text-xs;
+}
+
+.prose p {
+  @apply mb-2 last:mb-0;
+}
